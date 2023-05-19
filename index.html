@@ -1,0 +1,137 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- link jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+  <!-- bootstrap css download this later-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <!-- css stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="./assets/css/style.css" rel="stylesheet">
+  <title>Matching game</title>
+</head>
+
+<body
+  style="background-color:#194466;background-image: url('./assets/images/nautica.jpg');background-position: center center;background-size:cover;background-repeat:no-repeat;margin:0;padding:0">
+
+  <!-- modal prompting game start  -->
+  <!-- Button trigger modal -->
+
+  <!-- Start Modal -->
+  <div class="modal fade" id="startModal" tabindex="-1" role="dialog" aria-labelledby="startGameModal"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body d-flex flex-column justify-content-center align-items-center"
+          style="background-color:#1f4489;border:0;border-radius:0; color:whitesmoke">
+          <h2
+            style="font-family:'Montserrat', Arial, Helvetica, sans-serif;color:#fff;font-size:22px;font-weight:600;text-align:center;margin:20px 20px">
+            Marine Memory Card Game</h2>
+          <p
+            style="text-align:center;font-family:'Montserrat', Arial, Helvetica, sans-serif;color:#fff;font-weight:400;color:#fff;font-size:20px;margin:20px">
+            See how quickly can you find all the pairs.
+          </p>
+          <button id="startBtn" type="button" class="btn btn-primary modalBtn"
+            style="font-family:'Montserrat', Arial, Helvetica, sans-serif;color:#fff;">Start!</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Pause modal -->
+  <div class="modal fade" id="pauseModal" tabindex="-1" role="dialog" aria-labelledby="endGameModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body d-flex flex-column justify-content-center"
+          style="background-color:#1f4489;border:0;border-radius:0; color:whitesmoke">
+          <h2
+            style="font-family:'Montserrat', Arial, Helvetica, sans-serif;color:#fff;font-size:22px;font-weight:600;text-align:center;margin:20px 20px">
+            Marine Memory Card Game</h2>
+          <h2 
+            style="text-align:center;font-family:'Montserrat', Arial, Helvetica, sans-serif;color:#fff;font-weight:400;color:#fff;font-size:22px;margin:20px">
+          </h2>
+          <div class="d-flex flex-row flex-wrap justify-content-around align-items-center">
+            <button id="continueBtn" type="button" class="btn btn-primary modalBtn"
+              style="font-family:'Montserrat', Arial, Helvetica, sans-serif;color:#fff;">Continue</button>
+            <button id="restartBtn" type="button" class="btn btn-primary modalBtn"
+              style="font-family:'Montserrat', Arial, Helvetica, sans-serif;color:#fff;">Restart</button>
+            <a href="#" class="modalBtn"><button class="btn btn-primary"
+                style="text-decoration: none; font-family:'Montserrat', Arial, Helvetica, sans-serif;color:#fff;">
+                View Cards</button></a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- end modal -->
+  <div class="modal fade" id="endModal" tabindex="-1" role="dialog" aria-labelledby="endGameModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body d-flex flex-column justify-content-center align-items-center"
+          style="background-color:#1f4489;border:0;border-radius:0; color:whitesmoke">
+          <h2
+            style="font-family:'Montserrat', Arial, Helvetica, sans-serif;color:#fff;font-size:22px;font-weight:600;text-align:center;margin:20px 20px">
+            Marine Memory Card Game</h2>
+          <span id="finishTime" style="text-align:center;font-family:'Montserrat', Arial, Helvetica, sans-serif;color:#fff;font-weight:400;color:#fff;font-size:22px;margin:20px"></span>
+          <div class="d-flex flex-row flex-wrap justify-content-around align-items-center">
+            <button id="playAgainBtn" type="button" class="btn btn-primary modalBtn"
+              style="font-family:'Montserrat', Arial, Helvetica, sans-serif;color:#fff;">Play Again!</button>
+            <a href="#" class="modalBtn"><button class="btn btn-primary"
+                style="text-decoration: none; font-family:'Montserrat', Arial, Helvetica, sans-serif;color:#fff;">
+                View Cards</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- load in cards -->
+    <main class="container" style="width:100%;text-align:center;margin-bottom:60px;padding:0">
+      <div style="width:90%;height:auto;border:0;margin-left:auto;margin-right:auto;text-align:center">
+        <div class="d-flex flex-row flex-wrap justify-content-around align-items-center">
+          <!-------- STOPWATCH ----------->
+          <div class="stopwatch" style="margin:15px;">
+            <span class="time" id="stopwatch" style="padding:0;color:#fff;font-size:22px;">00:00:00</span>
+          </div>
+          <i id="pauseBtn" class="fa fa-pause" style="font-size:24px;color:#fff"></i>
+
+        </div>
+
+      </div>
+      <section id="grid"
+        class="container d-flex flex-row flex-wrap justify-content-center col-sm-12 col-md-8 col-lg-6 pt-4">
+
+      </section>
+
+      <!----- LOGO ----->
+      <div
+        style="width:90%;height:auto;border:o;margin-left:auto;margin-right:auto; margin-top: 20px; padding:0px;text-align:center">
+        <a href="/index.html" target="_blank"><img src="./assets/images/watchdogs-icon-watermark.png"
+            style="width:90px;height:auto"></a>
+
+      </div>
+
+      <audio id="flip" src="./assets/audio/flip.m4a"></audio>
+      <audio id="right" src="./assets/audio/right.m4a"></audio>
+      <audio id="wrong" src="./assets/audio/wrong.m4a"></audio>
+
+    </main>
+
+
+    <!-- bootstrap functions -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- stopwatch functions -->
+    <script src="https://cdn.jsdelivr.net/npm/easytimer.js@3.0.0/dist/easytimer.min.js"></script>
+    <!-- matching game functions -->
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

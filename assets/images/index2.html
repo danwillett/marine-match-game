@@ -1,0 +1,242 @@
+<!DOCTYPE HTML PRIVATE>
+
+<html>
+<head>
+ <title>Memory Matcing Card Game </title></title>
+ 
+ <meta name="viewport" content="width = 320" />
+ <meta name="viewport" content="initial-scale=1.0" />
+
+<!-------- STYLES ----------->
+   <link href="assets/css/marine-main.css" rel="stylesheet">
+   <link href="assets/css/marine-style.css" rel="stylesheet">
+	
+<!-------- JS ----------->
+  <script type="text/javascript" src="assets/js/jquery.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.inview.min.js"></script>
+  <script type="text/javascript" src="assets/js/main.js"></script>
+
+<!-------- FONT ----------->	
+ <link href='http://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600' rel='stylesheet' type='text/css'>
+
+<!-------- FAVICON ----------->	
+ <link rel="shortcut icon" href="favicon.png">
+	
+ 
+</head>
+
+
+<!-------- BODY STYLE ----------->	
+<body style="background-color:#194466;background-image: url('nautica.jpg');background-position: center center;background-size:cover;background-repeat:no-repeat;margin:0;padding:0">
+ 
+<!-------- MAIN CONTAINER ----------->	 
+<div class="container" style="width:100%;text-align:center;margin-bottom:60px;padding:0">
+ 
+  
+ 
+<!-------- INTRO AUTO-MODAL ----------->	  
+<script type="text/javascript">
+   
+               $(window).load(function(){
+                $('#modalconfirmation').modal('show');
+ 
+            });
+
+  </script>  
+  
+<!-------- CARD IMAGES MAIN CONTAINER ----------->	 
+<div class="container" style="width:100%;text-align:center;margin-top:0px;padding:0">
+ 
+<!-------- CARD IMAGES SUB-CONTAINER ----------->	  
+<div style="width:100%;max-width:500px;margin-left:auto;margin-right:auto;padding:5px">
+ 
+    <a data-toggle="modal" href="#modal-humpback"><img class="matchimg" src="1c.png" alt="Humpback"></a>
+ 
+	<img class="matchimg" src="cardback.png">
+ 
+	<img class="matchimg" src="cardback.png">
+ 
+	<img class="matchimg" src="cardback.png"> 
+ 
+	<img class="matchimg" src="cardback.png">
+ 
+	<img class="matchimg" src="cardback.png"> 
+ 
+	<img class="matchimg" src="cardback.png">
+ 
+	<img class="matchimg" src="cardback.png"> 
+  	
+	<img class="matchimg" src="cardback.png"> 
+	
+    <a data-toggle="modal" href="#modal-spermwhale"><img class="matchimg" src="1b.png" alt="Sperm Whale"></a>
+ 
+	<img class="matchimg" src="cardback.png"> 
+ 
+	<img class="matchimg" src="cardback.png"> 
+ 
+	<img class="matchimg" src="cardback.png">  
+ 
+	<img class="matchimg" src="cardback.png"> 
+ 
+	<img class="matchimg" src="cardback.png"> 
+ 
+	<img class="matchimg" src="cardback.png"> 
+ 
+	<img class="matchimg" src="cardback.png"> 
+  	
+	<img class="matchimg" src="cardback.png">  
+	
+	<img class="matchimg" src="cardback.png">  
+ 
+	<img class="matchimg" src="cardback.png"> 
+ 
+	<img class="matchimg" src="cardback.png">  
+ 
+	<img class="matchimg" src="cardback.png"> 
+ 
+	<img class="matchimg" src="cardback.png"> 
+  	
+	<img class="matchimg" src="cardback.png"> 
+	
+	<div style="width:90%;margin-top:10px;margin-left:55px;margin-right:55px"> 
+<img class="matchedimg" src="1b.png" alt="Humpback Whale">
+<img class="matchedimg" src="1c.png" alt="Sperm Whale">
+
+</div> 
+</div>	 
+		 
+	
+
+<!-------- STOPWATCH-CONTAINER ----------->	 
+  <div style="width:90%;height:auto;border:0;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;padding:0px;text-align:center">
+
+<!-------- STOPWATCH ----------->	 
+   <div class="stopwatch" style="margin-bottom:-25px">
+   <span class="time" id="display" style="margin:0;padding:0">00:00:00</span>
+   </div>
+   
+ </div> 
+<!-------- /STOPWATCH CONTAINER ----------->	
+
+</div> 
+</div>
+ 
+<!-------------MODAL Humpback---------------------->
+  <div id="modal-humpback" class="modal fade" style="background-color:transparent;width:300px;height:450px;margin-left:auto;margin-right:auto;overflow:hidden;" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog" style="background-color:transparent">
+        <div class="modal-humpback" style="width:300px;height:450px;background-image: url('blank.png');background-position: center center;background-size:cover;border:0;border-radius:0">
+          
+		  <div class="modal-body" style="background-color:transparent">
+			
+			<div class="row" style="background-color:transparent">  
+				<!----- spacer column----->
+			 
+			   
+			   <!----- modal body column----->
+			   <div class="col-sm-12">
+			   	  
+			  <p style="text-align:center;margin:0;padding:0">
+			  <a href="#" data-dismiss="modal"><img style="width:120%;height:auto;margin-left:-20px;border:0" src="1c.png"></a>
+			  </p>
+			  
+			 </div>
+			 <!----- spacer column----->
+				<div class="col-sm-1">&nbsp;
+				</div>
+				
+				</div> <!----- /row ----->
+ 
+ 
+</div> 
+</div>
+</div>
+</div>
+<!-------------/ MODAL Snail ---------------------->  
+
+   
+    
+<!-------------MODAL Spermwhale ---------------------->
+  <div id="modal-spermwhale" class="modal fade" style="background-color:transparent;width:300px;height:450px;margin-left:auto;margin-right:auto;overflow:hidden;" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog" style="background-color:transparent">
+        <div class="modal-spermwhale" style="width:300px;height:450px;background-image: url('blank.png');background-position: center center;background-size:cover;border:0;border-radius:0">
+          
+		  <div class="modal-body" style="background-color:transparent">
+			
+			<div class="row" style="background-color:transparent">  
+				<!----- spacer column----->
+			 
+			   
+			   <!----- modal body column----->
+			   <div class="col-sm-12">
+			   	  
+			  <p style="text-align:center;margin:0;padding:0">
+			  <a href="#" data-dismiss="modal"><img style="width:120%;height:auto;margin-left:-20px;border:0" src="1b.png"></a>
+			  </p>
+			  
+			 </div>
+			 <!----- spacer column----->
+				<div class="col-sm-1">&nbsp;
+				</div>
+				
+				</div> <!----- /row ----->
+ 
+ 
+</div> 
+</div>
+</div>
+</div>
+<!-------------/ MODAL Spermwhale ---------------------->  
+  
+  
+  
+<!-------------||||||||||||||||| AUTO-MODAL |||||||||||||||||||||---------------------->
+  <div id="modalconfirmation" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="background-color:#1f4489;border:0;border-radius:0">
+          
+		  <div class="modal-body">
+			
+			<div class="row">  
+				<!----- spacer column----->
+			 
+			   
+			   <!----- modal body column----->
+			   <div class="col-sm-12">
+			   	   	<h2 style="font-family:'Montserrat', Arial, Helvetica, sans-serif;color:#fff;font-size:22px;font-weight:600;text-align:center;margin:20px 20px">
+					Marine  Memory Card Game				</h2>
+			 
+			   <p style="text-align:center;font-family:'Montserrat', Arial, Helvetica, sans-serif;color:#fff;font-weight:400;color:#fff;font-size:20px;margin:20px">
+			 See how quickly can you find all the pairs.</span> 
+			  </p>
+			  <p style="text-align:center;">
+			  <a href="#" data-dismiss="modal"><button type="button" class="button-white"> <span style="font-weight:600"> OK </button></a></span>
+			  </p>
+	 
+			 </div>
+			 <!----- spacer column----->
+				<div class="col-sm-1">&nbsp;
+				</div>
+				
+				</div> <!----- /row ----->
+ 
+ 
+</div> 
+</div>
+</div>
+</div>  </div>   
+
+   
+   <p>
+   
+ <!----- LOGO ----->   
+ <div style="width:90%;height:auto;border:o;margin-left:auto;margin-right:auto;padding:0px;text-align:center">
+ <a href="/index.html" target="_blank"><img src="watchdogs-icon-watermark.png" style="width:90px;height:auto"></a>
+ 
+    </div>
+   </p>
+ 
+ 
+</body>
+
+</html>
